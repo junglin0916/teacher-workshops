@@ -2,18 +2,21 @@
 <html lang="zh-TW">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=device-width, initial-scale=device-width">
   <title>台中市教師研習資訊</title>
   <style>
-    body { font-family: Arial, sans-serif; margin: 20px; background-color: #f8f9fa; color: #333;}
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; margin: 0; padding: 20px; background-color: #f5f7fa; color: #2c3e50; }
     .container { max-width: 800px; margin: 0 auto; }
-    h1 { color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 10px; }
-    .filter-info { background: #e8f4fd; color: #2980b9; padding: 10px; border-radius: 5px; margin-bottom: 15px; font-weight: bold; }
-    .workshop { background: #fff; border: 1px solid #e0e0e0; border-radius: 6px; padding: 15px; margin-bottom: 12px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
-    .title { font-size: 1.1em; font-weight: bold; color: #2c3e50; margin-bottom: 8px; }
-    .meta { color: #7f8c8d; font-size: 0.9em; margin-bottom: 8px; }
-    .badge { background: #e67e22; color: #fff; padding: 2px 6px; border-radius: 4px; font-size: 0.8em; margin-right: 8px; }
-    a { display: inline-block; color: #2980b9; text-decoration: none; font-weight: bold; margin-top: 5px; }
-    a:hover { text-decoration: underline; }
+    h1 { font-size: 24px; font-weight: 700; color: #1a252f; border-bottom: 3px solid #3498db; padding-bottom: 12px; margin-bottom: 20px; }
+    .filter-info { background: #e8f4fd; color: #2980b9; padding: 12px 16px; border-radius: 6px; margin-bottom: 20px; font-weight: 600; border-left: 4px solid #3498db; }
+    .workshop-card { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 8px; padding: 18px; margin-bottom: 15px; box-shadow: 0 4px 6px rgba(0,0,0,0.02); transition: transform 0.2s, box-shadow 0.2s; }
+    .workshop-card:hover { transform: translateY(-2px); box-shadow: 0 6px 12px rgba(0,0,0,0.05); }
+    .title { font-size: 17px; font-weight: 700; color: #2c3e50; line-height: 1.4; margin-bottom: 10px; }
+    .meta-row { display: flex; align-items: center; gap: 10px; font-size: 13px; color: #7f8c8d; margin-bottom: 12px; }
+    .badge { background: #e67e22; color: #ffffff; padding: 3px 8px; border-radius: 4px; font-weight: 600; font-size: 11px; text-transform: uppercase; }
+    .date { font-weight: 500; }
+    .link-btn { display: inline-block; color: #3498db; text-decoration: none; font-weight: 600; font-size: 14px; }
+    .link-btn:hover { text-decoration: underline; color: #2980b9; }
   </style>
 </head>
 <body>
@@ -37,9 +40,10 @@
           return;
         }
 
-        // FILTER HERE: Look for "數位學習"
+        // FILTER: Find only target postings with "數位學習" (or "數位" to catch variations)
+        const targetKeyword = "數位學習";
         const filteredData = data.filter(item => 
-          item.title.includes("數位學習") || item.title.includes("數位")
+          item.title.includes(targetKeyword) || item.title.includes("數位")
         );
 
         container.innerHTML = "";
@@ -48,31 +52,31 @@
           statusDiv.innerText = `🎯 已篩選出 ${filteredData.length} 筆與「數位學習」相關的最新公告：`;
           renderItems(filteredData);
         } else {
-          statusDiv.innerText = "ℹ️ 今日無「數位學習」專屬公告，顯示其他最新研習公告：";
-          // Fallback: show the first 10 general announcements so the page is not empty!
+          statusDiv.innerText = `ℹ️ 目前學校與研習中心無最新「${targetKeyword}」公告。顯示其他最新公告：`;
+          // Fallback: Display the first 10 generic notices so the dashboard remains functional
           renderItems(data.slice(0, 10));
         }
 
       } catch (error) {
-        console.error("Error fetching workshops.json:", error);
-        statusDiv.innerText = "❌ 無法讀取 workshops.json 檔案。請確認 GitHub Actions 已成功執行產出此檔案。";
+        console.error("Error parsing workshops.json:", error);
+        statusDiv.innerText = "❌ 無法讀取 workshops.json 檔案。請確認 Actions 已成功執行並推播了 JSON。";
       }
     }
 
     function renderItems(items) {
       const container = document.getElementById("workshops");
       items.forEach(item => {
-        const div = document.createElement("div");
-        div.className = "workshop";
-        div.innerHTML = `
+        const card = document.createElement("div");
+        card.className = "workshop-card";
+        card.innerHTML = `
           <div class="title">🔹 ${item.title}</div>
-          <div class="meta">
+          <div class="meta-row">
             <span class="badge">${item.unit}</span>
-            <span>日期：${item.date}</span>
+            <span class="date">發佈日期：${item.date}</span>
           </div>
-          <div><a href="${item.link}" target="_blank">詳細資訊 ↗</a></div>
+          <div><a class="link-btn" href="${item.link}" target="_blank">查看詳細資訊 ↗</a></div>
         `;
-        container.appendChild(div);
+        container.appendChild(card);
       });
     }
 
