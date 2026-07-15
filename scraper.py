@@ -2,8 +2,7 @@ import requests
 from bs4 import BeautifulSoup
 import json
 
-# Target site
-url = "https://www.iots.tc.edu.tw/"
+url = "https://www.iots.tc.edu.tw/"  # Taichung teacher training site
 
 response = requests.get(url)
 response.encoding = "utf-8"
@@ -11,12 +10,12 @@ soup = BeautifulSoup(response.text, "lxml")
 
 workshops = []
 
-# Example: find training announcements in the site structure
-# Adjust selectors depending on the actual HTML layout
-for item in soup.select("div.news-item, li"):  # try common containers
+# Adjust selectors based on the site's HTML structure
+# Example: announcements might be inside <li> or <div class="news-item">
+for item in soup.select("li, div.news-item"):
     title = item.get_text(strip=True)
     link_tag = item.find("a")
-    link = link_tag["href"] if link_tag else ""
+    link = link_tag.get("href", "") if link_tag else ""
     date_tag = item.find("span", class_="date")
     date = date_tag.get_text(strip=True) if date_tag else ""
 
