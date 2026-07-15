@@ -1,4 +1,12 @@
-import json
-
-with open("workshops.json", "w", encoding="utf-8") as f:
-    json.dump(workshops, f, ensure_ascii=False, indent=2)
+[
+  {
+    "title": "數位學習精進方案研習 - AI工具應用",
+    "date": "2026-07-20",
+    "link": "https://www.tc.edu.tw/workshop/123"
+  },
+  {
+    "title": "數位學習精進方案研習 - 教師數位教材設計",
+    "date": "2026-07-25",
+    "link": "https://www.tc.edu.tw/workshop/456"
+  }
+]
