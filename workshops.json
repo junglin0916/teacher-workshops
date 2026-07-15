@@ -1,1 +1,377 @@
-
+[
+  {
+    "title": "最新消息活動資訊",
+    "date": "",
+    "link": "/index"
+  },
+  {
+    "title": "活動資訊",
+    "date": "",
+    "link": "/index/news"
+  },
+  {
+    "title": "研習資訊115年度研習歷年研習114年度研習113年度研習112年度研習研習Q&A學習資源",
+    "date": "",
+    "link": "/workshop"
+  },
+  {
+    "title": "115年度研習",
+    "date": "",
+    "link": "/workshop/115年度研習"
+  },
+  {
+    "title": "歷年研習114年度研習113年度研習112年度研習",
+    "date": "",
+    "link": "/workshop/archive"
+  },
+  {
+    "title": "114年度研習",
+    "date": "",
+    "link": "/workshop/archive/114"
+  },
+  {
+    "title": "113年度研習",
+    "date": "",
+    "link": "/workshop/archive/113"
+  },
+  {
+    "title": "112年度研習",
+    "date": "",
+    "link": "/workshop/archive/112年度研習"
+  },
+  {
+    "title": "研習Q&A",
+    "date": "",
+    "link": "/workshop/QA"
+  },
+  {
+    "title": "學習資源",
+    "date": "",
+    "link": "/workshop/source"
+  },
+  {
+    "title": "載具管理iPadChromebookWindowsAndroid",
+    "date": "",
+    "link": "/device-admin"
+  },
+  {
+    "title": "iPad",
+    "date": "",
+    "link": "/device-admin/ipad"
+  },
+  {
+    "title": "Chromebook",
+    "date": "",
+    "link": "/device-admin/chromebook"
+  },
+  {
+    "title": "Windows",
+    "date": "",
+    "link": "/device-admin/windows"
+  },
+  {
+    "title": "Android",
+    "date": "",
+    "link": "/device-admin/android"
+  },
+  {
+    "title": "校園軟體教育訓練PaGamO國語日報服務支援文件下載",
+    "date": "",
+    "link": "/software"
+  },
+  {
+    "title": "教育訓練PaGamO國語日報",
+    "date": "",
+    "link": "/software/training"
+  },
+  {
+    "title": "PaGamO",
+    "date": "",
+    "link": "/software/training/pagamo"
+  },
+  {
+    "title": "國語日報",
+    "date": "",
+    "link": "/software/training/premium-learnmode"
+  },
+  {
+    "title": "服務支援",
+    "date": "",
+    "link": "/software/服務支援"
+  },
+  {
+    "title": "文件下載",
+    "date": "",
+    "link": "/software/文件下載"
+  },
+  {
+    "title": "計畫指標",
+    "date": "",
+    "link": "/kpi"
+  },
+  {
+    "title": "年度成果",
+    "date": "",
+    "link": "/results"
+  },
+  {
+    "title": "單位介紹",
+    "date": "",
+    "link": "/contact-us"
+  },
+  {
+    "title": "檔案下載",
+    "date": "",
+    "link": "/download"
+  },
+  {
+    "title": "最新消息活動資訊",
+    "date": "",
+    "link": "/index"
+  },
+  {
+    "title": "活動資訊",
+    "date": "",
+    "link": "/index/news"
+  },
+  {
+    "title": "研習資訊115年度研習歷年研習114年度研習113年度研習112年度研習研習Q&A學習資源",
+    "date": "",
+    "link": "/workshop"
+  },
+  {
+    "title": "115年度研習",
+    "date": "",
+    "link": "/workshop/115年度研習"
+  },
+  {
+    "title": "歷年研習114年度研習113年度研習112年度研習",
+    "date": "",
+    "link": "/workshop/archive"
+  },
+  {
+    "title": "114年度研習",
+    "date": "",
+    "link": "/workshop/archive/114"
+  },
+  {
+    "title": "113年度研習",
+    "date": "",
+    "link": "/workshop/archive/113"
+  },
+  {
+    "title": "112年度研習",
+    "date": "",
+    "link": "/workshop/archive/112年度研習"
+  },
+  {
+    "title": "研習Q&A",
+    "date": "",
+    "link": "/workshop/QA"
+  },
+  {
+    "title": "學習資源",
+    "date": "",
+    "link": "/workshop/source"
+  },
+  {
+    "title": "載具管理iPadChromebookWindowsAndroid",
+    "date": "",
+    "link": "/device-admin"
+  },
+  {
+    "title": "iPad",
+    "date": "",
+    "link": "/device-admin/ipad"
+  },
+  {
+    "title": "Chromebook",
+    "date": "",
+    "link": "/device-admin/chromebook"
+  },
+  {
+    "title": "Windows",
+    "date": "",
+    "link": "/device-admin/windows"
+  },
+  {
+    "title": "Android",
+    "date": "",
+    "link": "/device-admin/android"
+  },
+  {
+    "title": "校園軟體教育訓練PaGamO國語日報服務支援文件下載",
+    "date": "",
+    "link": "/software"
+  },
+  {
+    "title": "教育訓練PaGamO國語日報",
+    "date": "",
+    "link": "/software/training"
+  },
+  {
+    "title": "PaGamO",
+    "date": "",
+    "link": "/software/training/pagamo"
+  },
+  {
+    "title": "國語日報",
+    "date": "",
+    "link": "/software/training/premium-learnmode"
+  },
+  {
+    "title": "服務支援",
+    "date": "",
+    "link": "/software/服務支援"
+  },
+  {
+    "title": "文件下載",
+    "date": "",
+    "link": "/software/文件下載"
+  },
+  {
+    "title": "計畫指標",
+    "date": "",
+    "link": "/kpi"
+  },
+  {
+    "title": "年度成果",
+    "date": "",
+    "link": "/results"
+  },
+  {
+    "title": "單位介紹",
+    "date": "",
+    "link": "/contact-us"
+  },
+  {
+    "title": "檔案下載",
+    "date": "",
+    "link": "/download"
+  },
+  {
+    "title": "最新消息活動資訊",
+    "date": "",
+    "link": "/index"
+  },
+  {
+    "title": "活動資訊",
+    "date": "",
+    "link": "/index/news"
+  },
+  {
+    "title": "研習資訊115年度研習歷年研習114年度研習113年度研習112年度研習研習Q&A學習資源",
+    "date": "",
+    "link": "/workshop"
+  },
+  {
+    "title": "115年度研習",
+    "date": "",
+    "link": "/workshop/115年度研習"
+  },
+  {
+    "title": "歷年研習114年度研習113年度研習112年度研習",
+    "date": "",
+    "link": "/workshop/archive"
+  },
+  {
+    "title": "114年度研習",
+    "date": "",
+    "link": "/workshop/archive/114"
+  },
+  {
+    "title": "113年度研習",
+    "date": "",
+    "link": "/workshop/archive/113"
+  },
+  {
+    "title": "112年度研習",
+    "date": "",
+    "link": "/workshop/archive/112年度研習"
+  },
+  {
+    "title": "研習Q&A",
+    "date": "",
+    "link": "/workshop/QA"
+  },
+  {
+    "title": "學習資源",
+    "date": "",
+    "link": "/workshop/source"
+  },
+  {
+    "title": "載具管理iPadChromebookWindowsAndroid",
+    "date": "",
+    "link": "/device-admin"
+  },
+  {
+    "title": "iPad",
+    "date": "",
+    "link": "/device-admin/ipad"
+  },
+  {
+    "title": "Chromebook",
+    "date": "",
+    "link": "/device-admin/chromebook"
+  },
+  {
+    "title": "Windows",
+    "date": "",
+    "link": "/device-admin/windows"
+  },
+  {
+    "title": "Android",
+    "date": "",
+    "link": "/device-admin/android"
+  },
+  {
+    "title": "校園軟體教育訓練PaGamO國語日報服務支援文件下載",
+    "date": "",
+    "link": "/software"
+  },
+  {
+    "title": "教育訓練PaGamO國語日報",
+    "date": "",
+    "link": "/software/training"
+  },
+  {
+    "title": "PaGamO",
+    "date": "",
+    "link": "/software/training/pagamo"
+  },
+  {
+    "title": "國語日報",
+    "date": "",
+    "link": "/software/training/premium-learnmode"
+  },
+  {
+    "title": "服務支援",
+    "date": "",
+    "link": "/software/服務支援"
+  },
+  {
+    "title": "文件下載",
+    "date": "",
+    "link": "/software/文件下載"
+  },
+  {
+    "title": "計畫指標",
+    "date": "",
+    "link": "/kpi"
+  },
+  {
+    "title": "年度成果",
+    "date": "",
+    "link": "/results"
+  },
+  {
+    "title": "單位介紹",
+    "date": "",
+    "link": "/contact-us"
+  },
+  {
+    "title": "檔案下載",
+    "date": "",
+    "link": "/download"
+  }
+]
