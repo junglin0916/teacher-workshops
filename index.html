@@ -4,34 +4,78 @@
   <meta charset="UTF-8">
   <title>台中市教師研習資訊</title>
   <style>
-    body { font-family: Arial, sans-serif; margin: 20px; }
-    h1 { color: #2c3e50; }
-    .workshop { border-bottom: 1px solid #ccc; padding: 10px 0; }
-    .date { color: #e67e22; font-weight: bold; }
-    a { color: #2980b9; text-decoration: none; }
+    body { font-family: Arial, sans-serif; margin: 20px; background-color: #f8f9fa; color: #333;}
+    .container { max-width: 800px; margin: 0 auto; }
+    h1 { color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 10px; }
+    .filter-info { background: #e8f4fd; color: #2980b9; padding: 10px; border-radius: 5px; margin-bottom: 15px; font-weight: bold; }
+    .workshop { background: #fff; border: 1px solid #e0e0e0; border-radius: 6px; padding: 15px; margin-bottom: 12px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+    .title { font-size: 1.1em; font-weight: bold; color: #2c3e50; margin-bottom: 8px; }
+    .meta { color: #7f8c8d; font-size: 0.9em; margin-bottom: 8px; }
+    .badge { background: #e67e22; color: #fff; padding: 2px 6px; border-radius: 4px; font-size: 0.8em; margin-right: 8px; }
+    a { display: inline-block; color: #2980b9; text-decoration: none; font-weight: bold; margin-top: 5px; }
+    a:hover { text-decoration: underline; }
   </style>
 </head>
 <body>
-  <h1>📚 台中市教師研習資訊</h1>
-  <div id="workshops"></div>
+  <div class="container">
+    <h1>📚 台中市教師研習資訊</h1>
+    <div id="filter-status" class="filter-info">正在載入最新研習資料...</div>
+    <div id="workshops"></div>
+  </div>
 
   <script>
     async function loadWorkshops() {
-      const response = await fetch("workshops.json");
-      const data = await response.json();
       const container = document.getElementById("workshops");
+      const statusDiv = document.getElementById("filter-status");
+      
+      try {
+        const response = await fetch("workshops.json");
+        const data = await response.json();
+        
+        if (!data || data.length === 0) {
+          statusDiv.innerText = "⚠️ 目前無任何更新數據，請確認後端爬蟲是否正常運作。";
+          return;
+        }
 
-      data.forEach(item => {
+        // FILTER HERE: Look for "數位學習"
+        const filteredData = data.filter(item => 
+          item.title.includes("數位學習") || item.title.includes("數位")
+        );
+
+        container.innerHTML = "";
+
+        if (filteredData.length > 0) {
+          statusDiv.innerText = `🎯 已篩選出 ${filteredData.length} 筆與「數位學習」相關的最新公告：`;
+          renderItems(filteredData);
+        } else {
+          statusDiv.innerText = "ℹ️ 今日無「數位學習」專屬公告，顯示其他最新研習公告：";
+          // Fallback: show the first 10 general announcements so the page is not empty!
+          renderItems(data.slice(0, 10));
+        }
+
+      } catch (error) {
+        console.error("Error fetching workshops.json:", error);
+        statusDiv.innerText = "❌ 無法讀取 workshops.json 檔案。請確認 GitHub Actions 已成功執行產出此檔案。";
+      }
+    }
+
+    function renderItems(items) {
+      const container = document.getElementById("workshops");
+      items.forEach(item => {
         const div = document.createElement("div");
         div.className = "workshop";
         div.innerHTML = `
           <div class="title">🔹 ${item.title}</div>
-          <div class="date">日期：${item.date}</div>
-          <div><a href="${item.link}" target="_blank">詳細資訊</a></div>
+          <div class="meta">
+            <span class="badge">${item.unit}</span>
+            <span>日期：${item.date}</span>
+          </div>
+          <div><a href="${item.link}" target="_blank">詳細資訊 ↗</a></div>
         `;
         container.appendChild(div);
       });
     }
+
     loadWorkshops();
   </script>
 </body>
