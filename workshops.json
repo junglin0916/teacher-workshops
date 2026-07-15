@@ -1,377 +1,87 @@
 [
   {
-    "title": "最新消息活動資訊",
+    "title": "🏆",
     "date": "",
-    "link": "/index"
+    "link": ""
   },
   {
-    "title": "活動資訊",
+    "title": "【",
     "date": "",
-    "link": "/index/news"
+    "link": ""
   },
   {
-    "title": "研習資訊115年度研習歷年研習114年度研習113年度研習112年度研習研習Q&A學習資源",
+    "title": "競賽",
     "date": "",
-    "link": "/workshop"
+    "link": ""
   },
   {
-    "title": "115年度研習",
+    "title": "】",
     "date": "",
-    "link": "/workshop/115年度研習"
+    "link": ""
   },
   {
-    "title": "歷年研習114年度研習113年度研習112年度研習",
+    "title": "115年度總統盃AI素養爭霸賽臺中市培訓研習",
     "date": "",
-    "link": "/workshop/archive"
+    "link": ""
   },
   {
-    "title": "114年度研習",
+    "title": "與競賽預告",
     "date": "",
-    "link": "/workshop/archive/114"
+    "link": ""
   },
   {
-    "title": "113年度研習",
+    "title": "研習】Gemini AI 教育家認證工作坊",
     "date": "",
-    "link": "/workshop/archive/113"
+    "link": ""
   },
   {
-    "title": "112年度研習",
+    "title": "研習】",
     "date": "",
-    "link": "/workshop/archive/112年度研習"
+    "link": ""
   },
   {
-    "title": "研習Q&A",
+    "title": "載具管理系統(mdm)研習",
     "date": "",
-    "link": "/workshop/QA"
+    "link": ""
   },
   {
-    "title": "學習資源",
+    "title": "📌",
     "date": "",
-    "link": "/workshop/source"
+    "link": ""
   },
   {
-    "title": "載具管理iPadChromebookWindowsAndroid",
+    "title": "各區專家學者名單(11504更新)",
     "date": "",
-    "link": "/device-admin"
+    "link": ""
   },
   {
-    "title": "iPad",
+    "title": "📌",
     "date": "",
-    "link": "/device-admin/ipad"
+    "link": ""
   },
   {
-    "title": "Chromebook",
+    "title": "學習載具管理系統(MOEMDM)納管具有資安疑慮之載具處理原則",
     "date": "",
-    "link": "/device-admin/chromebook"
+    "link": ""
   },
   {
-    "title": "Windows",
+    "title": "教師數位教學增能培訓架構(114年4月版)",
     "date": "",
-    "link": "/device-admin/windows"
+    "link": ""
   },
   {
-    "title": "Android",
+    "title": "教育部中小學數位教學指引3.0版",
     "date": "",
-    "link": "/device-admin/android"
+    "link": ""
   },
   {
-    "title": "校園軟體教育訓練PaGamO國語日報服務支援文件下載",
+    "title": "教育部學習載具管理系統之「載具使用率」定義說明",
     "date": "",
-    "link": "/software"
+    "link": ""
   },
   {
-    "title": "教育訓練PaGamO國語日報",
+    "title": "臺中市太平區樹德一街136巷30號",
     "date": "",
-    "link": "/software/training"
-  },
-  {
-    "title": "PaGamO",
-    "date": "",
-    "link": "/software/training/pagamo"
-  },
-  {
-    "title": "國語日報",
-    "date": "",
-    "link": "/software/training/premium-learnmode"
-  },
-  {
-    "title": "服務支援",
-    "date": "",
-    "link": "/software/服務支援"
-  },
-  {
-    "title": "文件下載",
-    "date": "",
-    "link": "/software/文件下載"
-  },
-  {
-    "title": "計畫指標",
-    "date": "",
-    "link": "/kpi"
-  },
-  {
-    "title": "年度成果",
-    "date": "",
-    "link": "/results"
-  },
-  {
-    "title": "單位介紹",
-    "date": "",
-    "link": "/contact-us"
-  },
-  {
-    "title": "檔案下載",
-    "date": "",
-    "link": "/download"
-  },
-  {
-    "title": "最新消息活動資訊",
-    "date": "",
-    "link": "/index"
-  },
-  {
-    "title": "活動資訊",
-    "date": "",
-    "link": "/index/news"
-  },
-  {
-    "title": "研習資訊115年度研習歷年研習114年度研習113年度研習112年度研習研習Q&A學習資源",
-    "date": "",
-    "link": "/workshop"
-  },
-  {
-    "title": "115年度研習",
-    "date": "",
-    "link": "/workshop/115年度研習"
-  },
-  {
-    "title": "歷年研習114年度研習113年度研習112年度研習",
-    "date": "",
-    "link": "/workshop/archive"
-  },
-  {
-    "title": "114年度研習",
-    "date": "",
-    "link": "/workshop/archive/114"
-  },
-  {
-    "title": "113年度研習",
-    "date": "",
-    "link": "/workshop/archive/113"
-  },
-  {
-    "title": "112年度研習",
-    "date": "",
-    "link": "/workshop/archive/112年度研習"
-  },
-  {
-    "title": "研習Q&A",
-    "date": "",
-    "link": "/workshop/QA"
-  },
-  {
-    "title": "學習資源",
-    "date": "",
-    "link": "/workshop/source"
-  },
-  {
-    "title": "載具管理iPadChromebookWindowsAndroid",
-    "date": "",
-    "link": "/device-admin"
-  },
-  {
-    "title": "iPad",
-    "date": "",
-    "link": "/device-admin/ipad"
-  },
-  {
-    "title": "Chromebook",
-    "date": "",
-    "link": "/device-admin/chromebook"
-  },
-  {
-    "title": "Windows",
-    "date": "",
-    "link": "/device-admin/windows"
-  },
-  {
-    "title": "Android",
-    "date": "",
-    "link": "/device-admin/android"
-  },
-  {
-    "title": "校園軟體教育訓練PaGamO國語日報服務支援文件下載",
-    "date": "",
-    "link": "/software"
-  },
-  {
-    "title": "教育訓練PaGamO國語日報",
-    "date": "",
-    "link": "/software/training"
-  },
-  {
-    "title": "PaGamO",
-    "date": "",
-    "link": "/software/training/pagamo"
-  },
-  {
-    "title": "國語日報",
-    "date": "",
-    "link": "/software/training/premium-learnmode"
-  },
-  {
-    "title": "服務支援",
-    "date": "",
-    "link": "/software/服務支援"
-  },
-  {
-    "title": "文件下載",
-    "date": "",
-    "link": "/software/文件下載"
-  },
-  {
-    "title": "計畫指標",
-    "date": "",
-    "link": "/kpi"
-  },
-  {
-    "title": "年度成果",
-    "date": "",
-    "link": "/results"
-  },
-  {
-    "title": "單位介紹",
-    "date": "",
-    "link": "/contact-us"
-  },
-  {
-    "title": "檔案下載",
-    "date": "",
-    "link": "/download"
-  },
-  {
-    "title": "最新消息活動資訊",
-    "date": "",
-    "link": "/index"
-  },
-  {
-    "title": "活動資訊",
-    "date": "",
-    "link": "/index/news"
-  },
-  {
-    "title": "研習資訊115年度研習歷年研習114年度研習113年度研習112年度研習研習Q&A學習資源",
-    "date": "",
-    "link": "/workshop"
-  },
-  {
-    "title": "115年度研習",
-    "date": "",
-    "link": "/workshop/115年度研習"
-  },
-  {
-    "title": "歷年研習114年度研習113年度研習112年度研習",
-    "date": "",
-    "link": "/workshop/archive"
-  },
-  {
-    "title": "114年度研習",
-    "date": "",
-    "link": "/workshop/archive/114"
-  },
-  {
-    "title": "113年度研習",
-    "date": "",
-    "link": "/workshop/archive/113"
-  },
-  {
-    "title": "112年度研習",
-    "date": "",
-    "link": "/workshop/archive/112年度研習"
-  },
-  {
-    "title": "研習Q&A",
-    "date": "",
-    "link": "/workshop/QA"
-  },
-  {
-    "title": "學習資源",
-    "date": "",
-    "link": "/workshop/source"
-  },
-  {
-    "title": "載具管理iPadChromebookWindowsAndroid",
-    "date": "",
-    "link": "/device-admin"
-  },
-  {
-    "title": "iPad",
-    "date": "",
-    "link": "/device-admin/ipad"
-  },
-  {
-    "title": "Chromebook",
-    "date": "",
-    "link": "/device-admin/chromebook"
-  },
-  {
-    "title": "Windows",
-    "date": "",
-    "link": "/device-admin/windows"
-  },
-  {
-    "title": "Android",
-    "date": "",
-    "link": "/device-admin/android"
-  },
-  {
-    "title": "校園軟體教育訓練PaGamO國語日報服務支援文件下載",
-    "date": "",
-    "link": "/software"
-  },
-  {
-    "title": "教育訓練PaGamO國語日報",
-    "date": "",
-    "link": "/software/training"
-  },
-  {
-    "title": "PaGamO",
-    "date": "",
-    "link": "/software/training/pagamo"
-  },
-  {
-    "title": "國語日報",
-    "date": "",
-    "link": "/software/training/premium-learnmode"
-  },
-  {
-    "title": "服務支援",
-    "date": "",
-    "link": "/software/服務支援"
-  },
-  {
-    "title": "文件下載",
-    "date": "",
-    "link": "/software/文件下載"
-  },
-  {
-    "title": "計畫指標",
-    "date": "",
-    "link": "/kpi"
-  },
-  {
-    "title": "年度成果",
-    "date": "",
-    "link": "/results"
-  },
-  {
-    "title": "單位介紹",
-    "date": "",
-    "link": "/contact-us"
-  },
-  {
-    "title": "檔案下載",
-    "date": "",
-    "link": "/download"
+    "link": ""
   }
 ]
