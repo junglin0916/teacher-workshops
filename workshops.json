@@ -1,87 +1,458 @@
 [
   {
-    "title": "🏆",
+    "title": "最新消息",
     "date": "",
+    "unit": "臺中市 教師研習中心",
+    "link": "/index"
+  },
+  {
+    "title": "活動資訊",
+    "date": "",
+    "unit": "臺中市 教師研習中心",
+    "link": "/index/news"
+  },
+  {
+    "title": "研習資訊",
+    "date": "",
+    "unit": "臺中市 教師研習中心",
+    "link": "/workshop"
+  },
+  {
+    "title": "115年度研習",
+    "date": "",
+    "unit": "臺中市 教師研習中心",
+    "link": "/workshop/115年度研習"
+  },
+  {
+    "title": "歷年研習",
+    "date": "",
+    "unit": "臺中市 教師研習中心",
+    "link": "/workshop/archive"
+  },
+  {
+    "title": "114年度研習",
+    "date": "",
+    "unit": "臺中市 教師研習中心",
+    "link": "/workshop/archive/114"
+  },
+  {
+    "title": "113年度研習",
+    "date": "",
+    "unit": "臺中市 教師研習中心",
+    "link": "/workshop/archive/113"
+  },
+  {
+    "title": "112年度研習",
+    "date": "",
+    "unit": "臺中市 教師研習中心",
+    "link": "/workshop/archive/112年度研習"
+  },
+  {
+    "title": "研習Q&A",
+    "date": "",
+    "unit": "臺中市 教師研習中心",
+    "link": "/workshop/QA"
+  },
+  {
+    "title": "學習資源",
+    "date": "",
+    "unit": "臺中市 教師研習中心",
+    "link": "/workshop/source"
+  },
+  {
+    "title": "載具管理",
+    "date": "",
+    "unit": "臺中市 教師研習中心",
+    "link": "/device-admin"
+  },
+  {
+    "title": "iPad",
+    "date": "",
+    "unit": "臺中市 教師研習中心",
+    "link": "/device-admin/ipad"
+  },
+  {
+    "title": "Chromebook",
+    "date": "",
+    "unit": "臺中市 教師研習中心",
+    "link": "/device-admin/chromebook"
+  },
+  {
+    "title": "Windows",
+    "date": "",
+    "unit": "臺中市 教師研習中心",
+    "link": "/device-admin/windows"
+  },
+  {
+    "title": "Android",
+    "date": "",
+    "unit": "臺中市 教師研習中心",
+    "link": "/device-admin/android"
+  },
+  {
+    "title": "校園軟體",
+    "date": "",
+    "unit": "臺中市 教師研習中心",
+    "link": "/software"
+  },
+  {
+    "title": "教育訓練",
+    "date": "",
+    "unit": "臺中市 教師研習中心",
+    "link": "/software/training"
+  },
+  {
+    "title": "PaGamO",
+    "date": "",
+    "unit": "臺中市 教師研習中心",
+    "link": "/software/training/pagamo"
+  },
+  {
+    "title": "國語日報",
+    "date": "",
+    "unit": "臺中市 教師研習中心",
+    "link": "/software/training/premium-learnmode"
+  },
+  {
+    "title": "服務支援",
+    "date": "",
+    "unit": "臺中市 教師研習中心",
+    "link": "/software/服務支援"
+  },
+  {
+    "title": "文件下載",
+    "date": "",
+    "unit": "臺中市 教師研習中心",
+    "link": "/software/文件下載"
+  },
+  {
+    "title": "計畫指標",
+    "date": "",
+    "unit": "臺中市 教師研習中心",
+    "link": "/kpi"
+  },
+  {
+    "title": "年度成果",
+    "date": "",
+    "unit": "臺中市 教師研習中心",
+    "link": "/results"
+  },
+  {
+    "title": "單位介紹",
+    "date": "",
+    "unit": "臺中市 教師研習中心",
+    "link": "/contact-us"
+  },
+  {
+    "title": "檔案下載",
+    "date": "",
+    "unit": "臺中市 教師研習中心",
+    "link": "/download"
+  },
+  {
+    "title": "最新消息",
+    "date": "",
+    "unit": "臺中市 教師研習中心",
+    "link": "/index"
+  },
+  {
+    "title": "活動資訊",
+    "date": "",
+    "unit": "臺中市 教師研習中心",
+    "link": "/index/news"
+  },
+  {
+    "title": "研習資訊",
+    "date": "",
+    "unit": "臺中市 教師研習中心",
+    "link": "/workshop"
+  },
+  {
+    "title": "115年度研習",
+    "date": "",
+    "unit": "臺中市 教師研習中心",
+    "link": "/workshop/115年度研習"
+  },
+  {
+    "title": "歷年研習",
+    "date": "",
+    "unit": "臺中市 教師研習中心",
+    "link": "/workshop/archive"
+  },
+  {
+    "title": "114年度研習",
+    "date": "",
+    "unit": "臺中市 教師研習中心",
+    "link": "/workshop/archive/114"
+  },
+  {
+    "title": "113年度研習",
+    "date": "",
+    "unit": "臺中市 教師研習中心",
+    "link": "/workshop/archive/113"
+  },
+  {
+    "title": "112年度研習",
+    "date": "",
+    "unit": "臺中市 教師研習中心",
+    "link": "/workshop/archive/112年度研習"
+  },
+  {
+    "title": "研習Q&A",
+    "date": "",
+    "unit": "臺中市 教師研習中心",
+    "link": "/workshop/QA"
+  },
+  {
+    "title": "學習資源",
+    "date": "",
+    "unit": "臺中市 教師研習中心",
+    "link": "/workshop/source"
+  },
+  {
+    "title": "載具管理",
+    "date": "",
+    "unit": "臺中市 教師研習中心",
+    "link": "/device-admin"
+  },
+  {
+    "title": "iPad",
+    "date": "",
+    "unit": "臺中市 教師研習中心",
+    "link": "/device-admin/ipad"
+  },
+  {
+    "title": "Chromebook",
+    "date": "",
+    "unit": "臺中市 教師研習中心",
+    "link": "/device-admin/chromebook"
+  },
+  {
+    "title": "Windows",
+    "date": "",
+    "unit": "臺中市 教師研習中心",
+    "link": "/device-admin/windows"
+  },
+  {
+    "title": "Android",
+    "date": "",
+    "unit": "臺中市 教師研習中心",
+    "link": "/device-admin/android"
+  },
+  {
+    "title": "校園軟體",
+    "date": "",
+    "unit": "臺中市 教師研習中心",
+    "link": "/software"
+  },
+  {
+    "title": "教育訓練",
+    "date": "",
+    "unit": "臺中市 教師研習中心",
+    "link": "/software/training"
+  },
+  {
+    "title": "PaGamO",
+    "date": "",
+    "unit": "臺中市 教師研習中心",
+    "link": "/software/training/pagamo"
+  },
+  {
+    "title": "國語日報",
+    "date": "",
+    "unit": "臺中市 教師研習中心",
+    "link": "/software/training/premium-learnmode"
+  },
+  {
+    "title": "服務支援",
+    "date": "",
+    "unit": "臺中市 教師研習中心",
+    "link": "/software/服務支援"
+  },
+  {
+    "title": "文件下載",
+    "date": "",
+    "unit": "臺中市 教師研習中心",
+    "link": "/software/文件下載"
+  },
+  {
+    "title": "計畫指標",
+    "date": "",
+    "unit": "臺中市 教師研習中心",
+    "link": "/kpi"
+  },
+  {
+    "title": "年度成果",
+    "date": "",
+    "unit": "臺中市 教師研習中心",
+    "link": "/results"
+  },
+  {
+    "title": "單位介紹",
+    "date": "",
+    "unit": "臺中市 教師研習中心",
+    "link": "/contact-us"
+  },
+  {
+    "title": "檔案下載",
+    "date": "",
+    "unit": "臺中市 教師研習中心",
+    "link": "/download"
+  },
+  {
+    "title": "More",
+    "date": "",
+    "unit": "臺中市 教師研習中心",
     "link": ""
   },
   {
-    "title": "【",
+    "title": "最新消息",
     "date": "",
-    "link": ""
+    "unit": "臺中市 教師研習中心",
+    "link": "/index"
   },
   {
-    "title": "競賽",
+    "title": "活動資訊",
     "date": "",
-    "link": ""
+    "unit": "臺中市 教師研習中心",
+    "link": "/index/news"
   },
   {
-    "title": "】",
+    "title": "研習資訊",
     "date": "",
-    "link": ""
+    "unit": "臺中市 教師研習中心",
+    "link": "/workshop"
   },
   {
-    "title": "115年度總統盃AI素養爭霸賽臺中市培訓研習",
+    "title": "115年度研習",
     "date": "",
-    "link": ""
+    "unit": "臺中市 教師研習中心",
+    "link": "/workshop/115年度研習"
   },
   {
-    "title": "與競賽預告",
+    "title": "歷年研習",
     "date": "",
-    "link": ""
+    "unit": "臺中市 教師研習中心",
+    "link": "/workshop/archive"
   },
   {
-    "title": "研習】Gemini AI 教育家認證工作坊",
+    "title": "114年度研習",
     "date": "",
-    "link": ""
+    "unit": "臺中市 教師研習中心",
+    "link": "/workshop/archive/114"
   },
   {
-    "title": "研習】",
+    "title": "113年度研習",
     "date": "",
-    "link": ""
+    "unit": "臺中市 教師研習中心",
+    "link": "/workshop/archive/113"
   },
   {
-    "title": "載具管理系統(mdm)研習",
+    "title": "112年度研習",
     "date": "",
-    "link": ""
+    "unit": "臺中市 教師研習中心",
+    "link": "/workshop/archive/112年度研習"
   },
   {
-    "title": "📌",
+    "title": "研習Q&A",
     "date": "",
-    "link": ""
+    "unit": "臺中市 教師研習中心",
+    "link": "/workshop/QA"
   },
   {
-    "title": "各區專家學者名單(11504更新)",
+    "title": "學習資源",
     "date": "",
-    "link": ""
+    "unit": "臺中市 教師研習中心",
+    "link": "/workshop/source"
   },
   {
-    "title": "📌",
+    "title": "載具管理",
     "date": "",
-    "link": ""
+    "unit": "臺中市 教師研習中心",
+    "link": "/device-admin"
   },
   {
-    "title": "學習載具管理系統(MOEMDM)納管具有資安疑慮之載具處理原則",
+    "title": "iPad",
     "date": "",
-    "link": ""
+    "unit": "臺中市 教師研習中心",
+    "link": "/device-admin/ipad"
   },
   {
-    "title": "教師數位教學增能培訓架構(114年4月版)",
+    "title": "Chromebook",
     "date": "",
-    "link": ""
+    "unit": "臺中市 教師研習中心",
+    "link": "/device-admin/chromebook"
   },
   {
-    "title": "教育部中小學數位教學指引3.0版",
+    "title": "Windows",
     "date": "",
-    "link": ""
+    "unit": "臺中市 教師研習中心",
+    "link": "/device-admin/windows"
   },
   {
-    "title": "教育部學習載具管理系統之「載具使用率」定義說明",
+    "title": "Android",
     "date": "",
-    "link": ""
+    "unit": "臺中市 教師研習中心",
+    "link": "/device-admin/android"
   },
   {
-    "title": "臺中市太平區樹德一街136巷30號",
+    "title": "校園軟體",
     "date": "",
-    "link": ""
+    "unit": "臺中市 教師研習中心",
+    "link": "/software"
+  },
+  {
+    "title": "教育訓練",
+    "date": "",
+    "unit": "臺中市 教師研習中心",
+    "link": "/software/training"
+  },
+  {
+    "title": "PaGamO",
+    "date": "",
+    "unit": "臺中市 教師研習中心",
+    "link": "/software/training/pagamo"
+  },
+  {
+    "title": "國語日報",
+    "date": "",
+    "unit": "臺中市 教師研習中心",
+    "link": "/software/training/premium-learnmode"
+  },
+  {
+    "title": "服務支援",
+    "date": "",
+    "unit": "臺中市 教師研習中心",
+    "link": "/software/服務支援"
+  },
+  {
+    "title": "文件下載",
+    "date": "",
+    "unit": "臺中市 教師研習中心",
+    "link": "/software/文件下載"
+  },
+  {
+    "title": "計畫指標",
+    "date": "",
+    "unit": "臺中市 教師研習中心",
+    "link": "/kpi"
+  },
+  {
+    "title": "年度成果",
+    "date": "",
+    "unit": "臺中市 教師研習中心",
+    "link": "/results"
+  },
+  {
+    "title": "單位介紹",
+    "date": "",
+    "unit": "臺中市 教師研習中心",
+    "link": "/contact-us"
+  },
+  {
+    "title": "檔案下載",
+    "date": "",
+    "unit": "臺中市 教師研習中心",
+    "link": "/download"
   }
 ]
