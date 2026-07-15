@@ -1,0 +1,4 @@
+import json
+
+with open("workshops.json", "w", encoding="utf-8") as f:
+    json.dump(workshops, f, ensure_ascii=False, indent=2)
