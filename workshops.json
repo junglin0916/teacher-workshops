@@ -1,12 +1,42 @@
-[
-  {
-    "title": "數位學習精進方案研習 - AI工具應用",
-    "date": "2026-07-20",
-    "link": "https://www.tc.edu.tw/workshop/123"
-  },
-  {
-    "title": "數位學習精進方案研習 - 教師數位教材設計",
-    "date": "2026-07-25",
-    "link": "https://www.tc.edu.tw/workshop/456"
-  }
-]
+import requests
+from bs4 import BeautifulSoup
+import json
+
+# URL for the search results (adjust if needed)
+url = "https://www1.inservice.edu.tw/index2-2.aspx?SearchWord=數位學習"
+
+response = requests.get(url)
+response.encoding = "utf-8"  # ensure Chinese characters show correctly
+soup = BeautifulSoup(response.text, "lxml")
+
+workshops = []
+
+# Find the table rows (skip header)
+rows = soup.select("table tr")[1:]  # adjust selector if site structure changes
+
+for row in rows:
+    cols = row.find_all("td")
+    if len(cols) >= 5:
+        code = cols[0].get_text(strip=True)
+        title = cols[1].get_text(strip=True)
+        start_date = cols[2].get_text(strip=True)
+        end_date = cols[3].get_text(strip=True)
+        unit = cols[4].get_text(strip=True)
+
+        # Try to find a link in the title cell
+        link_tag = cols[1].find("a")
+        link = link_tag["href"] if link_tag else ""
+
+        workshops.append({
+            "code": code,
+            "title": title,
+            "date": f"{start_date} ~ {end_date}",
+            "unit": unit,
+            "link": link
+        })
+
+# Save to JSON
+with open("workshops.json", "w", encoding="utf-8") as f:
+    json.dump(workshops, f, ensure_ascii=False, indent=2)
+
+print("workshops.json updated with real data")
