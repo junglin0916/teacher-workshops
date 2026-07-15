@@ -10,15 +10,19 @@ soup = BeautifulSoup(response.text, "lxml")
 
 workshops = []
 
-# Example selectors — adjust once we inspect the site structure
-for item in soup.select("li, div.news-item"):
+# Example: find spans with class names like "C9DxTc aw5Odc"
+for item in soup.select("span.C9DxTc.aw5Odc"):
     title = item.get_text(strip=True)
-    link_tag = item.find("a")
+
+    # Try to find a link near the span
+    link_tag = item.find_parent().find("a") if item.find_parent() else None
     link = link_tag.get("href", "") if link_tag else ""
-    date_tag = item.find("span", class_="date")
+
+    # Try to find a date nearby
+    date_tag = item.find_parent().find("span", class_="date") if item.find_parent() else None
     date = date_tag.get_text(strip=True) if date_tag else ""
 
-    if title and link:
+    if title:
         workshops.append({
             "title": title,
             "date": date,
