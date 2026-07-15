@@ -1,62 +1,79 @@
 import requests
 from bs4 import BeautifulSoup
 import json
+import re
 
 workshops = []
 
-# 1. Scrape the teacher training center (iots.tc.edu.tw)
+# Headers to bypass potential basic scraping blocks
+headers = {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+}
+
+# 1. Scrape the Teacher Training Center (iots.tc.edu.tw)
 try:
-    # Target the actual index/news subpage directly where posts are listed
+    # Direct announcements subpage
     url = "https://www.iots.tc.edu.tw/index/news"
-    headers = {
-        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
-    }
     response = requests.get(url, headers=headers, timeout=15)
     response.encoding = "utf-8"
     soup = BeautifulSoup(response.text, "lxml")
     
-    # Selecting the anchor tags that point to actual news items
-    # Typically they are inside a list or a news table on this CMS
-    links = soup.find_all("a", href=True)
-    for link_tag in links:
-        title = link_tag.get_text(strip=True)
-        link = link_tag.get("href", "")
-        
-        # Avoid navigation bar items by excluding typical menu links
-        if not title or len(title) < 5 or any(x in link for x in ["/device-admin", "/software", "/contact-us", "/kpi"]):
+    # Selecting actual news layout rows
+    # Trs inside the main container hold the actual articles
+    for item in soup.select("tr, li, .news-item"):
+        title_tag = item.find("a")
+        if not title_tag:
             continue
             
-        # Format links
+        title = title_tag.get_text(strip=True)
+        link = title_tag.get("href", "")
+        
+        # Avoid scraping menu bars and system links
+        if not title or len(title) < 5 or any(nav in link for nav in ["/device-admin", "/software", "/contact-us", "/kpi", "index/news", "/workshop"]):
+            continue
+            
         if not link.startswith("http"):
             link = f"https://www.iots.tc.edu.tw{link}"
             
+        # Parse Dates
+        date_tag = item.find("span", class_="date") or item.find("td", class_="date") or item.find("span")
+        date = date_tag.get_text(strip=True) if date_tag else ""
+        date_match = re.search(r"\d{4}-\d{2}-\d{2}|\d{3}-\d{2}-\d{2}", date)
+        clean_date = date_match.group(0) if date_match else "最新資訊"
+
         workshops.append({
             "title": title,
-            "date": "最新資訊",
+            "date": clean_date,
             "unit": "臺中市教師研習中心",
             "link": link
         })
 except Exception as e:
     print(f"Failed to scrape iots.tc.edu.tw: {e}")
 
-# 2. Scrape school announcement pages
-school_ids = [
-    "skgjh",   # 神岡國中
-    "dyps",    # 大勇國小
-    "dmjh",    # 大明國中
-    "taes",    # 泰安國小
-]
-base_url = "https://school.tc.edu.tw/open-message/{}"
+# 2. Scrape Specific Schools (school.tc.edu.tw)
+# Target IDs mapped to their actual School Names for proper presentation
+schools = {
+    "064504": "臺中女中",
+    "064748": "大元國小",
+    "064741": "潭子國小",
+    "064698": "長億高中",
+    "064519": "大雅國中",
+    "064712": "霧峰國小",
+    "064502": "居仁國中",
+    "064505": "光明國中",
+    "064616": "太平國中",
+    "064745": "大勇國小"
+}
 
-for sid in school_ids:
-    url = base_url.format(sid)
+for sid, sname in schools.items():
+    url = f"https://school.tc.edu.tw/open-message/{sid}"
     try:
-        response = requests.get(url, headers={"User-Agent": "Mozilla/5.0"}, timeout=15)
+        response = requests.get(url, headers=headers, timeout=15)
         response.encoding = "utf-8"
         soup = BeautifulSoup(response.text, "lxml")
         
-        # School.tc.edu.tw uses tables with rows (tr) for announcements
-        for row in soup.select("tr"):
+        # In cloud administrative portals, posts are structured in rows (tr) within lists
+        for row in soup.select("tr, .list-group-item"):
             title_tag = row.find("a")
             if not title_tag:
                 continue
@@ -64,35 +81,30 @@ for sid in school_ids:
             title = title_tag.get_text(strip=True)
             link = title_tag.get("href", "")
             
-            if not title or len(title) < 4:
+            # Skip invalid navigation headers
+            if not title or len(title) < 4 or "open-message" not in link:
                 continue
                 
             if not link.startswith("http"):
                 link = f"https://school.tc.edu.tw{link}"
                 
-            # Date is usually in a sibling column (td)
-            date_tag = row.find("span", class_="date") or row.find("td", class_="date")
-            date = date_tag.get_text(strip=True) if date_tag else "未知日期"
-            
-            # Map school ID to a nicer title
-            school_name = {
-                "skgjh": "神岡國中",
-                "dyps": "大勇國小",
-                "dmjh": "大明國中",
-                "taes": "泰安國小"
-            }.get(sid, sid.upper())
+            # Date finding
+            date_tag = row.find("span", class_="date") or row.find("td", class_="date") or row.find("span")
+            date = date_tag.get_text(strip=True) if date_tag else ""
+            date_match = re.search(r"\d{4}-\d{2}-\d{2}|\d{3}-\d{2}-\d{2}", date)
+            clean_date = date_match.group(0) if date_match else "最新資訊"
 
             workshops.append({
                 "title": title,
-                "date": date,
-                "unit": school_name,
+                "date": clean_date,
+                "unit": sname,
                 "link": link
             })
     except Exception as e:
-        print(f"Failed to scrape school {sid}: {e}")
+        print(f"Failed to scrape school {sname} ({sid}): {e}")
 
-# Save results
+# Save output to workshops.json
 with open("workshops.json", "w", encoding="utf-8") as f:
     json.dump(workshops, f, ensure_ascii=False, indent=2)
 
-print(f"Scraped {len(workshops)} total items successfully.")
+print(f"Scraped total items: {len(workshops)}")
