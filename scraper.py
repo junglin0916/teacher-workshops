@@ -10,8 +10,7 @@ soup = BeautifulSoup(response.text, "lxml")
 
 workshops = []
 
-# Adjust selectors based on the site's HTML structure
-# Example: announcements might be inside <li> or <div class="news-item">
+# Example selectors — adjust once we inspect the site structure
 for item in soup.select("li, div.news-item"):
     title = item.get_text(strip=True)
     link_tag = item.find("a")
